@@ -73,7 +73,7 @@ class StateInClassComponent extends Component {
     }
 
     render() {
-        const { number, fixedNumber } = this.state //state를 조회할 때는 this.state로 조회한다.
+        const {number, fixedNumber} = this.state //state를 조회할 때는 this.state로 조회한다.
         return (
             <div>
                 <div>
