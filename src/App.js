@@ -20,15 +20,16 @@
 // export default App
 
 import React, { Component } from 'react'
-import RefInComponent from './part5-Ref/3-RefInComponent'
+import Filter from './part6-RepeatComponent/2-Filter'
 
 class App extends Component {
     render() {
         return (
             <div>
-                <RefInComponent ref={(ref) => (this.scrollBox = ref)} />
-                <button onClick={() => this.scrollBox.scrollToBottom()}>맨 밑으로</button>
-                {/*<button onClick={this.scrollBox.scrollToBottom()}>맨 밑으로</button>*/}
+                {/*<RefInComponent ref={(ref) => (this.scrollBox = ref)} />*/}
+                {/*<button onClick={() => this.scrollBox.scrollToBottom()}>맨 밑으로</button>*/}
+                {/*<Map />*/}
+                <Filter />
             </div>
         )
     }
