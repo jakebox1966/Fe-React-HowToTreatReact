@@ -55,7 +55,7 @@
 //
 // export default App
 import React from 'react'
-import UseRef from './part8-Hooks/6-UseRef'
+import Sass from './part9-Style/2-Sass'
 
 const App = () => {
     // const [visible, setVisible] = useState(false)
@@ -75,7 +75,9 @@ const App = () => {
             {/*<UseReducer />*/}
             {/*<UseMemo />*/}
             {/*<UseCallback />*/}
-            <UseRef />
+            {/*<UseRef />*/}
+            {/*<NormalCss />*/}
+            <Sass />
         </div>
     )
 }
