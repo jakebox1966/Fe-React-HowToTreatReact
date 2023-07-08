@@ -55,7 +55,7 @@
 //
 // export default App
 import React from 'react'
-import Sass from './part9-Style/2-Sass'
+import StyledComponent from './part9-Style/4-StyledComponent'
 
 const App = () => {
     // const [visible, setVisible] = useState(false)
@@ -77,7 +77,9 @@ const App = () => {
             {/*<UseCallback />*/}
             {/*<UseRef />*/}
             {/*<NormalCss />*/}
-            <Sass />
+            {/*<Sass />*/}
+            {/*<CssModule />*/}
+            <StyledComponent />
         </div>
     )
 }

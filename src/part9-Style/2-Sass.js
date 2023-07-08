@@ -8,10 +8,12 @@
  * - sass와 scss의 차이점
  *      1. sass 확장자는 중괄호 ({})와 세미콜론(;)을 사용하지 않는다.
  *      2. scss 확장자는 기존 css를 작성하는 방식과 크게 다르지 않다.
+ *
+ * - node_modules에서 라이브러리 불러오기 : @import '~library/style'
  */
 
 import React from 'react'
-import './SassComponent.scss'
+import './styles/SassComponent.scss'
 
 const Sass = () => {
     return (
