@@ -19,19 +19,69 @@
 //
 // export default App
 
-import React, { Component } from 'react'
-import RefInComponent from './part5-Ref/3-RefInComponent'
+// import React, {Component} from 'react'
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <RefInComponent ref={(ref) => (this.scrollBox = ref)} />
-                <button onClick={() => this.scrollBox.scrollToBottom()}>맨 밑으로</button>
-                {/*<button onClick={this.scrollBox.scrollToBottom()}>맨 밑으로</button>*/}
-            </div>
-        )
-    }
+// 랜덤 색상을 생성합니다.
+// function getRandomColor() {
+//     return '#' + Math.floor(Math.random() * 16777215).toString(16)
+// }
+// class App extends Component {
+//     state = {
+//         color: '#000000',
+//     }
+//
+//     handleClick = () => {
+//         this.setState({
+//             color: getRandomColor(),
+//         })
+//     }
+//
+//     render() {
+//         return (
+//             <div>
+//                 <RefInComponent ref={(ref) => (this.scrollBox = ref)} />
+//                 <button onClick={() => this.scrollBox.scrollToBottom()}>맨 밑으로</button>
+//                 <Map />
+//                 <Filter />
+//                 <button onClick={this.handleClick}>랜덤 색상</button>
+//                 <ComponentDidCatch>
+//                     <LifeCycleInReact color={this.state.color} />
+//                 </ComponentDidCatch>
+//
+//             </div>
+//         )
+//     }
+// }
+//
+// export default App
+import React from 'react'
+import StyledComponent from './part9-Style/4-StyledComponent'
+
+const App = () => {
+    // const [visible, setVisible] = useState(false)
+
+    return (
+        <div>
+            {/*<UseState />*/}
+            {/*<UseEffect />*/}
+            {/*<button*/}
+            {/*    onClick={() => {*/}
+            {/*        setVisible(!visible)*/}
+            {/*    }}>*/}
+            {/*    {visible ? '숨기기' : '보이기'}*/}
+            {/*</button>*/}
+            {/*<hr />*/}
+            {/*{visible && <UseEffect />}*/}
+            {/*<UseReducer />*/}
+            {/*<UseMemo />*/}
+            {/*<UseCallback />*/}
+            {/*<UseRef />*/}
+            {/*<NormalCss />*/}
+            {/*<Sass />*/}
+            {/*<CssModule />*/}
+            <StyledComponent />
+        </div>
+    )
 }
 
 export default App
