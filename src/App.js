@@ -55,7 +55,16 @@
 //
 // export default App
 import React from 'react'
-import StyledComponent from './part9-Style/4-StyledComponent'
+import {Route, Routes} from 'react-router-dom'
+import Home from './part12-Routing/pages/Home'
+import About from './part12-Routing/pages/About'
+import UrlParameter from './part12-Routing/3-UrlParameter'
+import Articles from './part12-Routing/pages/Articles'
+import Article from './part12-Routing/pages/Article'
+import Layout from './part12-Routing/layout/Layout'
+import NotFound from './part12-Routing/pages/NotFound'
+import Login from './part12-Routing/pages/Login'
+import Mypage from './part12-Routing/pages/Mypage'
 
 const App = () => {
     // const [visible, setVisible] = useState(false)
@@ -79,7 +88,21 @@ const App = () => {
             {/*<NormalCss />*/}
             {/*<Sass />*/}
             {/*<CssModule />*/}
-            <StyledComponent />
+            {/*<StyledComponent />*/}
+            <Routes>
+                <Route path={'/'} element={<Layout />}>
+                    <Route index element={<Home />}></Route>
+                    <Route path="/about" element={<About />}></Route>
+                    <Route path="/profiles/:username" element={<UrlParameter />}></Route>
+
+                    <Route path="/articles" element={<Articles />}>
+                        <Route path=":id" element={<Article />} />
+                    </Route>
+                </Route>
+                <Route path={'/login'} element={<Login />} />
+                <Route path={'/mypage'} element={<Mypage />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
         </div>
     )
 }

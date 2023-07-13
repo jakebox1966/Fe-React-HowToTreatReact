@@ -2,14 +2,17 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
-import Immer from './Immer'
+import App from './App'
+import { BrowserRouter } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
     // <React.StrictMode>
-    // <App />,
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>,
     // <ComponentOptimization/>
-    <Immer />,
+    // <Immer />,
     // </React.StrictMode>,
 )
 
