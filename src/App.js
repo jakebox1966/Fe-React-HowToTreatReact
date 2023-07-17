@@ -55,10 +55,6 @@
 //
 // export default App
 import React from 'react'
-import {ColorProvider} from './part14-ContextAPI/2-DynamicContext'
-import DynamicContextWithActions from './part14-ContextAPI/3-DynamicContextWithActions'
-import WhatIsContextApi from './part14-ContextAPI/1-WhatIsContextAPI'
-import UseContextHook from "./part14-ContextAPI/4-UseContextHook";
 
 const App = () => {
     // const [visible, setVisible] = useState(false)
@@ -97,15 +93,15 @@ const App = () => {
             {/*    <Route path={'/mypage'} element={<Mypage />} />*/}
             {/*    <Route path="*" element={<NotFound />} />*/}
             {/*</Routes>*/}
-            <ColorProvider>
-                <div>
-                    <DynamicContextWithActions />
-                    <hr />
-                    <WhatIsContextApi />
-                    <hr />
-                    <UseContextHook />
-                </div>
-            </ColorProvider>
+            {/*<ColorProvider>*/}
+            {/*    <div>*/}
+            {/*        <DynamicContextWithActions />*/}
+            {/*        <hr />*/}
+            {/*        <WhatIsContextApi />*/}
+            {/*        <hr />*/}
+            {/*        <UseContextHook />*/}
+            {/*    </div>*/}
+            {/*</ColorProvider>*/}
         </div>
     )
 }
