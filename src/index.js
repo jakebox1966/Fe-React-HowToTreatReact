@@ -2,16 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
-import { BrowserRouter } from 'react-router-dom'
-import Axios from './Axios'
+import App from './App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
     // <React.StrictMode>
-    <BrowserRouter>
-        {/*<App />*/}
-        <Axios />
-    </BrowserRouter>,
+    // <BrowserRouter>
+    <App />,
+    // <Axios />
+    // </BrowserRouter>,
     // <ComponentOptimization/>
     // <Immer />,
     // </React.StrictMode>,

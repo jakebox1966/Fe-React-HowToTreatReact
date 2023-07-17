@@ -55,16 +55,10 @@
 //
 // export default App
 import React from 'react'
-import {Route, Routes} from 'react-router-dom'
-import Home from './part12-Routing/pages/Home'
-import About from './part12-Routing/pages/About'
-import UrlParameter from './part12-Routing/3-UrlParameter'
-import Articles from './part12-Routing/pages/Articles'
-import Article from './part12-Routing/pages/Article'
-import Layout from './part12-Routing/layout/Layout'
-import NotFound from './part12-Routing/pages/NotFound'
-import Login from './part12-Routing/pages/Login'
-import Mypage from './part12-Routing/pages/Mypage'
+import {ColorProvider} from './part14-ContextAPI/2-DynamicContext'
+import DynamicContextWithActions from './part14-ContextAPI/3-DynamicContextWithActions'
+import WhatIsContextApi from './part14-ContextAPI/1-WhatIsContextAPI'
+import UseContextHook from "./part14-ContextAPI/4-UseContextHook";
 
 const App = () => {
     // const [visible, setVisible] = useState(false)
@@ -89,20 +83,29 @@ const App = () => {
             {/*<Sass />*/}
             {/*<CssModule />*/}
             {/*<StyledComponent />*/}
-            <Routes>
-                <Route path={'/'} element={<Layout />}>
-                    <Route index element={<Home />}></Route>
-                    <Route path="/about" element={<About />}></Route>
-                    <Route path="/profiles/:username" element={<UrlParameter />}></Route>
+            {/*<Routes>*/}
+            {/*    <Route path={'/'} element={<Layout />}>*/}
+            {/*        <Route index element={<Home />}></Route>*/}
+            {/*        <Route path="/about" element={<About />}></Route>*/}
+            {/*        <Route path="/profiles/:username" element={<UrlParameter />}></Route>*/}
 
-                    <Route path="/articles" element={<Articles />}>
-                        <Route path=":id" element={<Article />} />
-                    </Route>
-                </Route>
-                <Route path={'/login'} element={<Login />} />
-                <Route path={'/mypage'} element={<Mypage />} />
-                <Route path="*" element={<NotFound />} />
-            </Routes>
+            {/*        <Route path="/articles" element={<Articles />}>*/}
+            {/*            <Route path=":id" element={<Article />} />*/}
+            {/*        </Route>*/}
+            {/*    </Route>*/}
+            {/*    <Route path={'/login'} element={<Login />} />*/}
+            {/*    <Route path={'/mypage'} element={<Mypage />} />*/}
+            {/*    <Route path="*" element={<NotFound />} />*/}
+            {/*</Routes>*/}
+            <ColorProvider>
+                <div>
+                    <DynamicContextWithActions />
+                    <hr />
+                    <WhatIsContextApi />
+                    <hr />
+                    <UseContextHook />
+                </div>
+            </ColorProvider>
         </div>
     )
 }
