@@ -55,7 +55,10 @@
 //
 // export default App
 import React from 'react'
-import StyledComponent from './part9-Style/4-StyledComponent'
+import {ColorProvider} from './part14-ContextAPI/2-DynamicContext'
+import DynamicContextWithActions from './part14-ContextAPI/3-DynamicContextWithActions'
+import WhatIsContextApi from './part14-ContextAPI/1-WhatIsContextAPI'
+import UseContextHook from "./part14-ContextAPI/4-UseContextHook";
 
 const App = () => {
     // const [visible, setVisible] = useState(false)
@@ -79,7 +82,30 @@ const App = () => {
             {/*<NormalCss />*/}
             {/*<Sass />*/}
             {/*<CssModule />*/}
-            <StyledComponent />
+            {/*<StyledComponent />*/}
+            {/*<Routes>*/}
+            {/*    <Route path={'/'} element={<Layout />}>*/}
+            {/*        <Route index element={<Home />}></Route>*/}
+            {/*        <Route path="/about" element={<About />}></Route>*/}
+            {/*        <Route path="/profiles/:username" element={<UrlParameter />}></Route>*/}
+
+            {/*        <Route path="/articles" element={<Articles />}>*/}
+            {/*            <Route path=":id" element={<Article />} />*/}
+            {/*        </Route>*/}
+            {/*    </Route>*/}
+            {/*    <Route path={'/login'} element={<Login />} />*/}
+            {/*    <Route path={'/mypage'} element={<Mypage />} />*/}
+            {/*    <Route path="*" element={<NotFound />} />*/}
+            {/*</Routes>*/}
+            <ColorProvider>
+                <div>
+                    <DynamicContextWithActions />
+                    <hr />
+                    <WhatIsContextApi />
+                    <hr />
+                    <UseContextHook />
+                </div>
+            </ColorProvider>
         </div>
     )
 }
