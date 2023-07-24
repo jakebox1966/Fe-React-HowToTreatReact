@@ -1,5 +1,5 @@
 import React from 'react'
-import { changeInput, insert, remove, toggle } from '../modules/todos'
+import { changeInput, insert, remove, toggle } from '../modules/todoEasy'
 import { connect } from 'react-redux'
 import Todos from '../components/Todos'
 

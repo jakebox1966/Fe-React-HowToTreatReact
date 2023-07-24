@@ -22,16 +22,18 @@
  */
 
 import React from 'react'
-import CounterContainer from './containers/CounterContainer'
-import TodosContainer from './containers/TodosContainer'
+import CounterContainerWithHooks from './containers/CounterContainerWithHooks'
+import TodosContainerWithHooks from './containers/TodosContainerWithHooks'
 
 const Redux = () => {
     return (
         <div>
-            <CounterContainer />
+            {/*<CounterContainer />*/}
+            <CounterContainerWithHooks />
             {/*<Counter number={0} />*/}
             <hr />
-            <TodosContainer />
+            {/*<TodosContainer />*/}
+            <TodosContainerWithHooks />
             {/*<Todos />*/}
         </div>
     )
