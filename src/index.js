@@ -2,16 +2,19 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
-import Redux from './part17-ControlStateWithRedux/Redux'
-import rootReducer from './part17-ControlStateWithRedux/modules'
-import { legacy_createStore as createStore } from 'redux'
+// import rootReducer from './part17-ControlStateWithRedux/modules'
+import { applyMiddleware, legacy_createStore as createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
+import rootReducer from './part18-Middleware/modules'
+import { logger } from 'redux-logger/src'
+import ReduxThunk from 'redux-thunk'
+import SampleContainer from './part18-Middleware/containers/SampleContainer'
 
 const store = createStore(
     rootReducer,
     // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-    composeWithDevTools(),
+    composeWithDevTools(applyMiddleware(logger, ReduxThunk)),
 )
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
@@ -24,8 +27,10 @@ root.render(
     // <ComponentOptimization/>
     // <Immer />,
     // </React.StrictMode>,
+    //     <Redux />
     <Provider store={store}>
-        <Redux />,
+        {/*<Middleware />*/}
+        <SampleContainer />
     </Provider>,
 )
 
