@@ -1,12 +1,13 @@
 import { combineReducers } from 'redux'
-import counterWithThunk from './counterWithThunk'
-import counter from './counter'
-import sample from './sample'
+import sampleRefactoring from './sampleRefactoring'
+import loading from './loading'
 
 const rootReducer = combineReducers({
-    counter,
-    counterWithThunk,
-    sample,
+    // counter,
+    // counterWithThunk,
+    // sample,
+    sampleRefactoring,
+    loading,
 })
 
 export default rootReducer
