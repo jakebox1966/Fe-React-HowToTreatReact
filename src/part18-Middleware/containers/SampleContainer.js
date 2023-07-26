@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import Sample from '../../components/thunk/Sample'
+import Sample from '../components/Sample'
 import { connect } from 'react-redux'
-import { getPost, getUsers } from '../../modules/thunk/sampleRefactoring'
-import loading from '../../modules/loading'
+import { getPost, getUsers } from '../modules/thunk/sampleRefactoring'
+import loading from '../modules/loading'
 
 const SampleContainer = ({ getPost, getUsers, post, users, loadingPost, loadingUsers }) => {
     useEffect(() => {
@@ -16,9 +16,9 @@ const SampleContainer = ({ getPost, getUsers, post, users, loadingPost, loadingU
 }
 
 export default connect(
-    ({ sampleRefactoring }) => ({
-        post: sampleRefactoring.post,
-        users: sampleRefactoring.users,
+    ({ sampleWithSaga }) => ({
+        post: sampleWithSaga.post,
+        users: sampleWithSaga.users,
         loadingPost: loading['sample/GET_POST'],
         loadingUsers: loading['sample/GET_POST'],
     }),
