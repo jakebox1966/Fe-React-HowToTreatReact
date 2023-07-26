@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import Sample from '../components/Sample'
+import Sample from '../../components/thunk/Sample'
 import { connect } from 'react-redux'
-import { getPost, getUsers } from '../modules/sampleRefactoring'
-import loading from '../modules/loading'
+import { getPost, getUsers } from '../../modules/thunk/sampleRefactoring'
+import loading from '../../modules/loading'
 
 const SampleContainer = ({ getPost, getUsers, post, users, loadingPost, loadingUsers }) => {
     useEffect(() => {

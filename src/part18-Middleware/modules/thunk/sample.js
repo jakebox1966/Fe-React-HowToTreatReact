@@ -1,6 +1,6 @@
 // 액션 타입을 선언한다.
 // 한 요청당 세 개를 만들어야 한다.
-import * as api from '../api/api'
+import * as api from '../../api/api'
 import {handleActions} from 'redux-actions'
 
 const GET_POST = 'sample/GET_POST'

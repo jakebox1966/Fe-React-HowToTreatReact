@@ -6,16 +6,20 @@ import reportWebVitals from './reportWebVitals'
 import { applyMiddleware, legacy_createStore as createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import rootReducer from './part18-Middleware/modules'
+import rootReducer, { rootSaga } from './part18-Middleware/modules'
 import { logger } from 'redux-logger/src'
 import ReduxThunk from 'redux-thunk'
-import SampleContainer from './part18-Middleware/containers/SampleContainer'
+import createSagaMiddleware from 'redux-saga'
+import Middleware from './part18-Middleware/Middleware'
+
+const sagaMiddleware = createSagaMiddleware()
 
 const store = createStore(
     rootReducer,
     // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-    composeWithDevTools(applyMiddleware(logger, ReduxThunk)),
+    composeWithDevTools(applyMiddleware(logger, ReduxThunk, sagaMiddleware)),
 )
+sagaMiddleware.run(rootSaga)
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -29,8 +33,7 @@ root.render(
     // </React.StrictMode>,
     //     <Redux />
     <Provider store={store}>
-        {/*<Middleware />*/}
-        <SampleContainer />
+        <Middleware />
     </Provider>,
 )
 
