@@ -25,7 +25,7 @@ const initialState = {
     users: null,
 }
 
-const sampleRefactoring = handleActions(
+const sampleWithThunkRefactoring = handleActions(
     {
         [GET_POST_SUCCESS]: (state, action) => ({
             ...state,
@@ -45,4 +45,4 @@ const sampleRefactoring = handleActions(
     initialState,
 )
 
-export default sampleRefactoring
+export default sampleWithThunkRefactoring

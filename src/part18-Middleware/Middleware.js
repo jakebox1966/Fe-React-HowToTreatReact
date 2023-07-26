@@ -22,13 +22,13 @@
  *
  */
 
-import SampleContainer from './containers/SampleContainer'
+import CounterContainer from './containers/CounterContainer'
 
 const Middleware = () => {
     return (
         <div>
-            {/*<CounterContainer />*/}
-            <SampleContainer />
+            <CounterContainer />
+            {/*<SampleContainer />*/}
         </div>
     )
 }

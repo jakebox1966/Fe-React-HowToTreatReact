@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Counter from '../components/Counter'
 import { connect } from 'react-redux'
-import { decreaseAsync, increaseAsync } from '../modules/thunk/counterWithThunk'
+import { decreaseAsync, increaseAsync } from '../modules/saga/counterWithSaga'
 
 const CounterContainer = ({ number, increaseAsync, decreaseAsync }) => {
     useEffect(() => {

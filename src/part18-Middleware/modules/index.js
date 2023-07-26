@@ -6,19 +6,19 @@ import { combineReducers } from 'redux'
 import { all } from 'redux-saga/effects'
 import loading from './loading'
 import counter, { counterSaga } from './saga/counterWithSaga'
-import sampleWithSaga, { sampleSaga } from './saga/sampleWithSaga'
 
 const rootReducer = combineReducers({
     counter,
-    sampleWithSaga,
-    // sampleRefactoring,
+    // sampleWithSaga,
+    // sampleWithSagaRefactoring,
+    // sampleWithThunkRefactoring,
 
     loading,
 })
 
 export function* rootSaga() {
     // all 함수는 여러 사가를 합쳐 주는 역할을 한다.
-    yield all([counterSaga(), sampleSaga])
+    yield all([counterSaga()])
 }
 
 export default rootReducer
