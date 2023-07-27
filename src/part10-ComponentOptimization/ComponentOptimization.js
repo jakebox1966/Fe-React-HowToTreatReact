@@ -34,9 +34,9 @@
  */
 
 import './ComponentOptimization.css'
-import TodoTemplate from './part10-ComponentOptimization/1-Optimization/TodoTemplate'
-import TodoInsert from './part10-ComponentOptimization/1-Optimization/TodoInsert'
-import TodoList from './part10-ComponentOptimization/1-Optimization/TodoList'
+import TodoTemplate from './1-Optimization/TodoTemplate'
+import TodoInsert from './1-Optimization/TodoInsert'
+import TodoList from './1-Optimization/TodoList'
 import { useCallback, useReducer, useRef } from 'react'
 
 function createBulkTodos() {
@@ -64,7 +64,7 @@ function todoReducer(todos, action) {
         case 'TOGGLE': // 토글(checkBox Control)
             // { type: 'TOGGLE', id: 1 }
             return todos.map((todo) =>
-                todo.id === action.id ? { ...todo, checked: !todo.checked } : todo,
+                todo.id === action.id ? {...todo, checked: !todo.checked} : todo,
             )
     }
 }
@@ -86,7 +86,7 @@ function App() {
             checked: false,
         }
         // setTodos((todos) => todos.concat(todo))
-        dispatch({ type: 'INSERT', todo })
+        dispatch({type: 'INSERT', todo})
         nextId.current += 1 // nextId 1씩 더하기
     }, [])
 
@@ -94,7 +94,7 @@ function App() {
     // - 함수형 업데이트 사용하여 useCallback 함수 두번째 파라미터 빈배열로 설정
     const onRemove = useCallback((id) => {
         // setTodos((todos) => todos.filter((todo) => todo.id !== id))
-        dispatch({ type: 'REMOVE', id })
+        dispatch({type: 'REMOVE', id})
     }, [])
 
     // - 수정 기능(checkBox control) => map 사용하여 불변성 유지하면서 특정 배열 원소 업데이트(useCallback 사용)
@@ -110,12 +110,12 @@ function App() {
         //             : todo,
         //     ),
         // )
-        dispatch({ type: 'TOGGLE', id })
+        dispatch({type: 'TOGGLE', id})
     }, [])
     return (
         <TodoTemplate>
-            <TodoInsert onInsert={onInsert} />
-            <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
+            <TodoInsert onInsert={onInsert}/>
+            <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle}/>
         </TodoTemplate>
     )
 }

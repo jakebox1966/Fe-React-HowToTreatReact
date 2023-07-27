@@ -1,7 +1,7 @@
 /**
  * 1.How to Use React-Router
  *
- * - 프로젝트에 리액트 라우터를 적용할 때는 index.js 파일에서 react-router-dom에 내장되어 있는 BrowserRouter라는 컴포넌트를 사용하여 감싸면 된다.
+ * - 프로젝트에 리액트 라우터를 적용할 때는 notify.js 파일에서 react-router-dom에 내장되어 있는 BrowserRouter라는 컴포넌트를 사용하여 감싸면 된다.
  *   => HTML5의 History API를 사용하여 페이지를 새로 불러오지 않고도 주소 변경 및 주소의 경로에 관련된 정보를 리액트 컴포넌트에서 사용할 수 있게 해준다.
  *
  * - 사용자의 브라우저 주소 경로에 따라 우리가 원하는 컴포넌트를 보여주려면 Route라는 컴포넌트를 통해 라우트 설정을 해주어야한다.
