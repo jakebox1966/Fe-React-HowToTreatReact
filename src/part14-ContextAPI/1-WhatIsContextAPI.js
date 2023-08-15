@@ -16,13 +16,13 @@
  */
 
 import React from 'react'
-import { ColorConsumer } from './2-DynamicContext'
+import {ColorConsumer} from './2-DynamicContext'
 
 const WhatIsContextApi = () => {
     return (
         <>
             <ColorConsumer>
-                {({ state }) => (
+                {({state}) => (
                     <>
                         <div
                             style={{
