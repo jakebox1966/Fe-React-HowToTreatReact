@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
-import App from './part19-CodeSplitting/4-CodeSplittingWithLoadableComponents/App'
+import { BrowserRouter } from 'react-router-dom'
+import Ssr from './part20-ServerSideRendering/Ssr'
 // import rootReducer from './part17-ControlStateWithRedux/modules'
 
 // const sagaMiddleware = createSagaMiddleware()
@@ -18,8 +19,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
     // <React.StrictMode>
     // <BrowserRouter>
-    // <App />,
-    // <Axios />
+    //     <App />
+    //     <Axios />
     // </BrowserRouter>,
     // <ComponentOptimization/>
     // <Immer />,
@@ -29,7 +30,10 @@ root.render(
     //     <Middleware />
     // </Provider>,
     // <CodeSplitting />,
-    <App />,
+    // <App />
+    <BrowserRouter>
+        <Ssr />
+    </BrowserRouter>,
 )
 
 // If you want to start measuring performance in your app, pass a function

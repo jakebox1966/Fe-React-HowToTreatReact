@@ -79,20 +79,20 @@ const App = () => {
             {/*<Sass />*/}
             {/*<CssModule />*/}
             {/*<StyledComponent />*/}
-            {/*<Routes>*/}
-            {/*    <Route path={'/'} element={<Layout />}>*/}
-            {/*        <Route index element={<Home />}></Route>*/}
-            {/*        <Route path="/about" element={<About />}></Route>*/}
-            {/*        <Route path="/profiles/:username" element={<UrlParameter />}></Route>*/}
 
-            {/*        <Route path="/articles" element={<Articles />}>*/}
-            {/*            <Route path=":id" element={<Article />} />*/}
-            {/*        </Route>*/}
+            {/*<Route path={'/'} element={<Layout />}>*/}
+            {/*    <Route index element={<Home />}></Route>*/}
+            {/*    <Route path="/about" element={<About />}></Route>*/}
+            {/*    <Route path="/profiles/:username" element={<UrlParameter />}></Route>*/}
+
+            {/*    <Route path="/articles" element={<Articles />}>*/}
+            {/*        <Route path=":id" element={<Article />} />*/}
             {/*    </Route>*/}
-            {/*    <Route path={'/login'} element={<Login />} />*/}
-            {/*    <Route path={'/mypage'} element={<Mypage />} />*/}
-            {/*    <Route path="*" element={<NotFound />} />*/}
-            {/*</Routes>*/}
+            {/*</Route>*/}
+            {/*<Route path={'/login'} element={<Login />} />*/}
+            {/*<Route path={'/mypage'} element={<Mypage />} />*/}
+            {/*<Route path="*" element={<NotFound />} />*/}
+
             {/*<ColorProvider>*/}
             {/*    <div>*/}
             {/*        <DynamicContextWithActions />*/}
